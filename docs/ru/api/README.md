@@ -72,7 +72,7 @@ export default {
 
 ### addPlugin()
 
-В Chart.js вы можете определить глобальные и встроенные плагины. Глобальные плагины без проблем работают с `vue-chartjs` как описано в [документации к Chart.js](http://www.chartjs.org/docs/latest/developers/plugins.html).
+В @swivel-admin/chart.js вы можете определить глобальные и встроенные плагины. Глобальные плагины без проблем работают с `vue-chartjs` как описано в [документации к @swivel-admin/chart.js](http://www.chartjs.org/docs/latest/developers/plugins.html).
 
 Если вы хотите добавить встроенные плагины, `vue-chartjs` предоставляет вспомогательный метод `addPlugin()`
 Вам надо вызвать `addPlugin()` перед вызовом метода `renderChart()`.
@@ -94,7 +94,7 @@ mounted () {
 
 ### renderChart()
 
-Создаёт экземпляр Chart.js и отрисовывает график.
+Создаёт экземпляр @swivel-admin/chart.js и отрисовывает график.
 
 - **Тип:** `Function`
 - **Аргументы:**: `Chart Data`, `Chart Options`
@@ -118,9 +118,9 @@ mounted () {
 }
 ```
 
-## Объект Chart.js
+## Объект @swivel-admin/chart.js
 
-Вы можете получить доступ к объекту Chart.js из вашего графика-компонента посредством `this.$data._chart`
+Вы можете получить доступ к объекту @swivel-admin/chart.js из вашего графика-компонента посредством `this.$data._chart`
 
 ## Canvas-элемент
 

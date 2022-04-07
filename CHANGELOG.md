@@ -15,14 +15,14 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * Fix type script definition for `addPlugin` method ([#564](https://github.com/apertureless/vue-chartjs/issues/564)) ([3065d70](https://github.com/apertureless/vue-chartjs/commit/3065d70))
-* Update chart.js peerDependency ([a140f5a](https://github.com/apertureless/vue-chartjs/commit/a140f5a))
+* Update @swivel-admin/chart.js peerDependency ([a140f5a](https://github.com/apertureless/vue-chartjs/commit/a140f5a))
 
 
 ### Features
 
 * **typescript:** Improve mixins type definitions ([2a6eb7b](https://github.com/apertureless/vue-chartjs/commit/2a6eb7b))
 * **typescript:** Improve mixins type definitions ([#514](https://github.com/apertureless/vue-chartjs/issues/514)) ([520faca](https://github.com/apertureless/vue-chartjs/commit/520faca))
-* Add @types/chart.js types in typescript definitions ([#536](https://github.com/apertureless/vue-chartjs/issues/536)) ([22fb8d1](https://github.com/apertureless/vue-chartjs/commit/22fb8d1))
+* Add @types/@swivel-admin/chart.js types in typescript definitions ([#536](https://github.com/apertureless/vue-chartjs/issues/536)) ([22fb8d1](https://github.com/apertureless/vue-chartjs/commit/22fb8d1))
 * enhance search on the documentation ([3542b34](https://github.com/apertureless/vue-chartjs/commit/3542b34))
 
 ## [3.4.2](https://github.com/apertureless/vue-chartjs/compare/v3.4.1...v3.4.2) (2019-03-18)
@@ -30,7 +30,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* Change peerDependency version of chart.js to include older versions ([8c780d3](https://github.com/apertureless/vue-chartjs/commit/8c780d3))
+* Change peerDependency version of @swivel-admin/chart.js to include older versions ([8c780d3](https://github.com/apertureless/vue-chartjs/commit/8c780d3))
 
 
 
@@ -64,7 +64,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * **babel:** fix decorator error with new version of babel ([2fe804b](https://github.com/apertureless/vue-chartjs/commit/2fe804b))
-* **core:** Delete old chart.js instance first ([#375](https://github.com/apertureless/vue-chartjs/issues/375)) ([89a7cac](https://github.com/apertureless/vue-chartjs/commit/89a7cac))
+* **core:** Delete old @swivel-admin/chart.js instance first ([#375](https://github.com/apertureless/vue-chartjs/issues/375)) ([89a7cac](https://github.com/apertureless/vue-chartjs/commit/89a7cac))
 * **mixins:** Add condition to check if chart instance is present. ([1fed8e7](https://github.com/apertureless/vue-chartjs/commit/1fed8e7))
 
 
@@ -212,7 +212,7 @@ All notable changes to this project will be documented in this file. See [standa
 **Closed issues:**
 
 - Regression in 2.8.3 [\#190](https://github.com/apertureless/vue-chartjs/issues/190)
-- Why default Chart.js styles are overridden? [\#189](https://github.com/apertureless/vue-chartjs/issues/189)
+- Why default @swivel-admin/chart.js styles are overridden? [\#189](https://github.com/apertureless/vue-chartjs/issues/189)
 - Legend or other options not working in reactiveProps [\#188](https://github.com/apertureless/vue-chartjs/issues/188)
 - Changes to yAxisID property does not re-render chart [\#177](https://github.com/apertureless/vue-chartjs/issues/177)
 
@@ -586,7 +586,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 **Closed issues:**
 
-- Update Chart.js docs to include link to vue-chartjs [\#32](https://github.com/apertureless/vue-chartjs/issues/32)
+- Update @swivel-admin/chart.js docs to include link to vue-chartjs [\#32](https://github.com/apertureless/vue-chartjs/issues/32)
 - Compatibility with Vue 2.1.10 [\#30](https://github.com/apertureless/vue-chartjs/issues/30)
 
 ## [v2.3.3](https://github.com/apertureless/vue-chartjs/tree/v2.3.3) (2017-01-19)

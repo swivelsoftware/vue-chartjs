@@ -73,7 +73,7 @@ export default {
 
 ### addPlugin
 
-No Chart.js, você pode definir plugins globais e embutidos. Os plug-ins globais estão funcionando sem problemas com o `vue-chartjs` como descrito no [Chart.js docs](http://www.chartjs.org/docs/latest/developers/plugins.html).
+No @swivel-admin/chart.js, você pode definir plugins globais e embutidos. Os plug-ins globais estão funcionando sem problemas com o `vue-chartjs` como descrito no [@swivel-admin/chart.js docs](http://www.chartjs.org/docs/latest/developers/plugins.html).
 
 Se você deseja adicionar plug-ins embutidos, `vue-chartjs` expõe um método auxiliar chamado `addPlugin()`
 Você deve chamar `addPlugin()` antes do método `renderChart()`.
@@ -95,7 +95,7 @@ mounted () {
 
 ### renderChart()
 
-Cria uma instância Chart.js e renderiza o gráfico.
+Cria uma instância @swivel-admin/chart.js e renderiza o gráfico.
 
 - **Tipo:** `Function`
 - **Argumentos**: `Chart Data`, `Chart Options`
@@ -119,9 +119,9 @@ mounted () {
 }
 ```
 
-## Objeto Chart.js
+## Objeto @swivel-admin/chart.js
 
-Você pode acessar o objeto Chart.js dentro do componente do gráfico com `this.$data._chart`
+Você pode acessar o objeto @swivel-admin/chart.js dentro do componente do gráfico com `this.$data._chart`
 
 ## Canvas
 

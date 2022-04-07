@@ -73,7 +73,7 @@ export default {
 
 ### addPlugin
 
-在 Chart.js 你可以定义全局和内联插件. 全局插件在没有 `vue-chartjs`也可以工作. 就像这个文档[Chart.js docs](http://www.chartjs.org/docs/latest/developers/plugins.html) 描述的.
+在 @swivel-admin/chart.js 你可以定义全局和内联插件. 全局插件在没有 `vue-chartjs`也可以工作. 就像这个文档[@swivel-admin/chart.js docs](http://www.chartjs.org/docs/latest/developers/plugins.html) 描述的.
 
 如果你需要添加内联插件, `vue-chartjs` 暴露出来了一个工具方法 `addPlugin()`
 你可以在`renderChart()`方法前调用`addPlugin()`.
@@ -95,7 +95,7 @@ mounted () {
 
 ### renderChart()
 
-创建一个 Chart.js 实例, 并渲染图表
+创建一个 @swivel-admin/chart.js 实例, 并渲染图表
 
 - **类型:** `Function`
 - **参数**: `Chart Data`, `Chart Options`
@@ -119,9 +119,9 @@ mounted () {
 }
 ```
 
-## Chart.js 对象
+## @swivel-admin/chart.js 对象
 
-你可以在你的图表组件里, 通过 `this.$data._chart` 访问 Chart.js 对象
+你可以在你的图表组件里, 通过 `this.$data._chart` 访问 @swivel-admin/chart.js 对象
 
 ## Canvas
 

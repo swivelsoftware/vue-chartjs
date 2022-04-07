@@ -27,11 +27,11 @@ module.exports = {
     umdNamedDefine: true
   },
   externals: {
-    'chart.js': {
+    '@swivel-admin/chart.js': {
       root: 'Chart',
-      commonjs: 'chart.js',
-      commonjs2: 'chart.js',
-      amd: 'chart.js'
+      commonjs: '@swivel-admin/chart.js',
+      commonjs2: '@swivel-admin/chart.js',
+      amd: '@swivel-admin/chart.js'
     }
   },
   resolve: {

@@ -9,6 +9,6 @@ features:
 - title: Extendable
   details: Simple to use, easy to extend 💪
 - title: Powerful
-  details: With the full power of chart.js 💯
+  details: With the full power of @swivel-admin/chart.js 💯
 footer: MIT Licensed | Copyright © 2018-present Jakub Juszczak
 ---

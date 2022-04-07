@@ -17,7 +17,7 @@
 
 # vue-chartjs
 
-**vue-chartjs** is a wrapper for [Chart.js](https://github.com/chartjs/Chart.js) in vue. You can easily create reuseable chart components.
+**vue-chartjs** is a wrapper for [@swivel-admin/chart.js](https://github.com/chartjs/@swivel-admin/chart.js) in vue. You can easily create reuseable chart components.
 
 ## Demo & Docs
 
@@ -37,20 +37,20 @@ If you're looking for v1 check this [branch](https://github.com/apertureless/vue
 
 ## Install
 
-- **yarn** install: `yarn add vue-chartjs chart.js`
-- **npm** install: `npm install vue-chartjs chart.js --save`
+- **yarn** install: `yarn add vue-chartjs @swivel-admin/chart.js`
+- **npm** install: `npm install vue-chartjs @swivel-admin/chart.js --save`
 
 Or if you want to use it directly in the browser add
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/@swivel-admin/chart.js/2.7.1/Chart.min.js"></script>
 <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
 ```
 to your scripts. See [Codepen](https://codepen.io/apertureless/pen/zEvvWM)
 
 
 ### Browser
-You can use `vue-chartjs` directly in the browser without any build setup. Like in this [codepen](https://codepen.io/apertureless/pen/zEvvWM). For this case, please use the `vue-chartjs.min.js` which is the minified version. You also need to add the Chart.js CDN script.
+You can use `vue-chartjs` directly in the browser without any build setup. Like in this [codepen](https://codepen.io/apertureless/pen/zEvvWM). For this case, please use the `vue-chartjs.min.js` which is the minified version. You also need to add the @swivel-admin/chart.js CDN script.
 
 You can then simply register your component:
 
@@ -86,7 +86,7 @@ import { Bar, Line } from 'vue-chartjs'
 Just create your own component.
 
 ```javascript
-// CommitChart.js
+// Commit@swivel-admin/chart.js
 import { Bar } from 'vue-chartjs'
 
 export default {
@@ -177,7 +177,7 @@ export default {
 
 ## Reactivity
 
-Chart.js does not update or re-render the chart if new data is passed.
+@swivel-admin/chart.js does not update or re-render the chart if new data is passed.
 However, you can simply implement this on your own or use one of the two mixins which are included.
 
 - `reactiveProp`

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import 'chart.js'
+import '@swivel-admin/chart.js'
 
 /** vue-chartjs component common definition */
 export declare class BaseChart extends Vue {

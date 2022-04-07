@@ -1,4 +1,4 @@
-import Chart from 'chart.js'
+import Chart from '@swivel-admin/chart.js'
 import { generateChart } from '../BaseCharts'
 
 Chart.defaults.LineWithLine = Chart.defaults.line

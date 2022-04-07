@@ -9,6 +9,6 @@ features:
 - title: Расширяемость
   details: Просто использовать, легко расширять 💪
 - title: Могущество
-  details: С полной силой chart.js 💯
+  details: С полной силой @swivel-admin/chart.js 💯
 footer: MIT Licensed | Copyright © 2018-present Jakub Juszczak
 ---

@@ -1,20 +1,20 @@
 # 最初に
 
-**vue-chartjs** は [Chart.js](https://github.com/chartjs/Chart.js) をvueで使用するためのラッパーです。 再利用可能なチャートコンポーネントを簡単に作成できます。
+**vue-chartjs** は [@swivel-admin/chart.js](https://github.com/chartjs/@swivel-admin/chart.js) をvueで使用するためのラッパーです。 再利用可能なチャートコンポーネントを簡単に作成できます。
 
 ## 初めに
 
-`vue-chartjs` あまり手間をかけずにvueの中でchart.jsを使うことができます。 シンプルなチャートをできるだけ早く起動して実行したいという人に最適です。
+`vue-chartjs` あまり手間をかけずにvueの中で@swivel-admin/chart.jsを使うことができます。 シンプルなチャートをできるだけ早く起動して実行したいという人に最適です。
 
-chart.jsの基本ロジックを抽象化していますが、公開されたchart.jsのオブジェクトを使用して柔軟にカスタマイズできます。
+@swivel-admin/chart.jsの基本ロジックを抽象化していますが、公開された@swivel-admin/chart.jsのオブジェクトを使用して柔軟にカスタマイズできます。
 
 ## インストール
 
 ### NPM
 
-`npm`を使って` vue-chartjs`をインストールすることができます。 ただしプロジェクトへの依存関係として `chart.js`を追加する必要があります。 なぜなら `Chart.js`はpeerDependencyだからです。 このため、Chart.jsのバージョンを完全に制御できます。
+`npm`を使って` vue-chartjs`をインストールすることができます。 ただしプロジェクトへの依存関係として `@swivel-admin/chart.js`を追加する必要があります。 なぜなら `@swivel-admin/chart.js`はpeerDependencyだからです。 このため、@swivel-admin/chart.jsのバージョンを完全に制御できます。
 
-`yarn add vue-chartjs chart.js` or `npm install vue-chartjs chart.js --save`
+`yarn add vue-chartjs @swivel-admin/chart.js` or `npm install vue-chartjs @swivel-admin/chart.js --save`
 
 ::: tip
 Vue.jsの Version 1.xを使用している場合は`legacy`タグを使用してください。しかし、vueのバージョン1はもうメンテナンスされません。
@@ -25,16 +25,16 @@ Vue.jsの Version 1.xを使用している場合は`legacy`タグを使用して
 ### ブラウザ
 
 ブラウザから直接 `vue-chartjs` を使用することができます。
-先に`Chart.js`スクリプトを追加してから`vue-chartjs`スクリプトを追加してください
+先に`@swivel-admin/chart.js`スクリプトを追加してから`vue-chartjs`スクリプトを追加してください
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/@swivel-admin/chart.js/2.7.1/Chart.min.js"></script>
 <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
 ```
 
 ## 統合
 
-`Chart.js`で利用可能なすべてのチャートタイプは名前付きコンポーネントとしてエクスポートされ、そのままインポートすることができます。 これらのコンポーネントは通常のVueコンポーネントですが、それを`拡張`する必要があります。
+`@swivel-admin/chart.js`で利用可能なすべてのチャートタイプは名前付きコンポーネントとしてエクスポートされ、そのままインポートすることができます。 これらのコンポーネントは通常のVueコンポーネントですが、それを`拡張`する必要があります。
 
 `vue-chartjs`の背後にある考え方は、最大限の柔軟性と拡張性を持ち、使いやすいコンポーネントを提供することです。 これを実現するには、独自の *Chart Component* を作成し、それを`vue-chartjs`コンポーネントして提供するように拡張する必要があります。
 
@@ -64,7 +64,7 @@ export default {
 
 メソッドthis.renderChart（）は、Barコンポーネントによって提供され、2つのパラメータを受け付けています。 どちらも`Object`です。 最初のものは表示するデータで、二番目のものはオプションを格納するオブジェクトです。
 
-チャート毎に必要なオブジェクト構造は公式 [Chart.js docs](http://www.chartjs.org/docs/latest/#creating-a-chart)をチェックしてください。
+チャート毎に必要なオブジェクト構造は公式 [@swivel-admin/chart.js docs](http://www.chartjs.org/docs/latest/#creating-a-chart)をチェックしてください。
 
 ### Vue シングルファイルコンポーネント
 
@@ -95,7 +95,7 @@ export default {
 
 ## チャートデータの更新
 
-Chart.js 自身ではデータセットを変更した場合に、ライブアップデートの機能を提供していません。 しかし`vue-chartjs`はこれを実現するために2つの mixin を提供します。
+@swivel-admin/chart.js 自身ではデータセットを変更した場合に、ライブアップデートの機能を提供していません。 しかし`vue-chartjs`はこれを実現するために2つの mixin を提供します。
 
 - `reactiveProp`
 - `reactiveData`
@@ -106,7 +106,7 @@ Chart.js 自身ではデータセットを変更した場合に、ライブア�
 
 ### 例
 
-**LineChart.js**
+**Line@swivel-admin/chart.js**
 ```javascript
 import { Line, mixins } from 'vue-chartjs'
 const { reactiveProp } = mixins
@@ -134,7 +134,7 @@ export default {
 </template>
 
 <script>
-  import LineChart from './LineChart.js'
+  import LineChart from './Line@swivel-admin/chart.js'
 
   export default {
     components: {
@@ -205,7 +205,7 @@ export default {
 
 `options`オブジェクトは今のところリアクティブではありません。 そのため、チャートのオプションを動的に変更しても、それらはミックスインによって認識されません。
 
-ミックスインを使用している場合は、`options`というプロパティとしてオプションを渡す必要があります。 mixinがchart.jsの`update()`メソッドを呼び出すか、新しいチャートを破棄して描画する際に、これは重要です。 ミックスインが新しいチャートを描画するとき、`this.renderChart(this.chartData、this.options)`を呼び出します。
+ミックスインを使用している場合は、`options`というプロパティとしてオプションを渡す必要があります。 mixinが@swivel-admin/chart.jsの`update()`メソッドを呼び出すか、新しいチャートを破棄して描画する際に、これは重要です。 ミックスインが新しいチャートを描画するとき、`this.renderChart(this.chartData、this.options)`を呼び出します。
 
 しかし、オプションを `mounted()`フックで直接渡すと、それらは失われます。
 
@@ -326,7 +326,7 @@ export default {
 
 一般的にはデータを取得するためにAPIを使用するのがパターンでしょう。しかし留意すべきことがいくつかあります。
 最も一般的な問題は、チャートコンポーネントを直接マウントし、非同期API呼び出しからデータを渡すことです。
-このアプローチでの問題点は、chart.jsがチャートをレンダリングしてチャートデータにアクセスしようとしますが、API呼び出しが非同期だということです。 この時、データが到着する前にあなたはチャートを表示しようとしてしまいます。
+このアプローチでの問題点は、@swivel-admin/chart.jsがチャートをレンダリングしてチャートデータにアクセスしようとしますが、API呼び出しが非同期だということです。 この時、データが到着する前にあなたはチャートを表示しようとしてしまいます。
 
 これを防ぐには、単純な `v-if`が最善の解決策です。
 
@@ -395,7 +395,7 @@ export default {
 
 ### 動的スタイルを使用したチャート
 
-あなたは `responsive：true`をセットして外側のdivにインラインスタイルとして適用されるstylesオブジェクトを渡すことができます。 これにより、外側のコンテナの高さと幅を動的に変更できます。 これはchart.jsのデフォルトの動作ではありません。 これには計算プロパティを使用するのが最善です。
+あなたは `responsive：true`をセットして外側のdivにインラインスタイルとして適用されるstylesオブジェクトを渡すことができます。 これにより、外側のコンテナの高さと幅を動的に変更できます。 これは@swivel-admin/chart.jsのデフォルトの動作ではありません。 これには計算プロパティを使用するのが最善です。
 
 ::: warning
  `position: relative`をセットする必要があります。
@@ -435,14 +435,14 @@ export default {
 
 ### Custom / New Charts
 
-場合によっては、デフォルトのChart.jsに用意されているチャートを拡張する必要があります。
+場合によっては、デフォルトの@swivel-admin/chart.jsに用意されているチャートを拡張する必要があります。
 デフォルトチャートを拡張および変更する方法、あるいは独自のチャートタイプを作成する方法は、たくさんの[例](http://www.chartjs.org/docs/latest/developers/charts.html)があります。
 
 `vue-chartjs`でも、これとほぼ同じ方法で行うことができます。
 
 ```js
-// 1. Import Chart.js so you can use the global Chart object
-import Chart from 'chart.js'
+// 1. Import @swivel-admin/chart.js so you can use the global Chart object
+import Chart from '@swivel-admin/chart.js'
 // 2. Import the `generateChart()` method to create the vue component.
 import { generateChart } from 'vue-chartjs'
 
@@ -470,7 +470,7 @@ export default {
 `vue-chartjs`の使い方に関するチュートリアルのようないくつかのリソースがあります。
 
 - [Using vue-chartjs with WordPress](https://medium.com/@apertureless/wordpress-vue-and-chart-js-6b61493e289f)
-- [Create stunning Charts with Vue and Chart.js](https://hackernoon.com/creating-stunning-charts-with-vue-js-and-chart-js-28af584adc0a)
-- [Let’s Build a Web App with Vue, Chart.js and an API Part I](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-544eb81c4b44)
-- [Let’s Build a Web App with Vue, Chart.js and an API Part II](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-part-ii-39781b1d5acf)
+- [Create stunning Charts with Vue and @swivel-admin/chart.js](https://hackernoon.com/creating-stunning-charts-with-vue-js-and-chart-js-28af584adc0a)
+- [Let’s Build a Web App with Vue, @swivel-admin/chart.js and an API Part I](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-544eb81c4b44)
+- [Let’s Build a Web App with Vue, @swivel-admin/chart.js and an API Part II](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-part-ii-39781b1d5acf)
 - [Build a realtime chart with VueJS and Pusher](https://blog.pusher.com/build-realtime-chart-with-vuejs-pusher/)

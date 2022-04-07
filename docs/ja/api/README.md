@@ -73,7 +73,7 @@ export default {
 
 ### プラグインの追加
 
-Chart.jsでは、グローバルプラグインとインラインプラグインを定義できます。 グローバルプラグインは、[Chart.js docs](http://www.chartjs.org/docs/latest/developers/plugins.html)で説明されているように`vue-chartjs`でも問題なく動作します。 
+@swivel-admin/chart.jsでは、グローバルプラグインとインラインプラグインを定義できます。 グローバルプラグインは、[@swivel-admin/chart.js docs](http://www.chartjs.org/docs/latest/developers/plugins.html)で説明されているように`vue-chartjs`でも問題なく動作します。 
 
 
 インラインプラグインを追加したい場合に備えて、`vue-chartjs`は`addPlugin()`と呼ばれるヘルパーメソッドを公開します。
@@ -97,7 +97,7 @@ mounted () {
 
 ### renderChart()
 
-Chart.js のインスタンスを作成して描画します。
+@swivel-admin/chart.js のインスタンスを作成して描画します。
 
 - **Type:** `Function`
 - **Arguments**: `Chart Data`, `Chart Options`
@@ -121,9 +121,9 @@ mounted () {
 }
 ```
 
-## Chart.js オブジェクト
+## @swivel-admin/chart.js オブジェクト
 
-独自のチャートコンポーネント内からChart.jsのオブジェクトには `this.$data._chart` でアクセスできます。
+独自のチャートコンポーネント内から@swivel-admin/chart.jsのオブジェクトには `this.$data._chart` でアクセスできます。
 
 ## Canvas
 

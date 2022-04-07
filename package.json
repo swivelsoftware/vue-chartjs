@@ -1,7 +1,7 @@
 {
   "name": "vue-chartjs",
   "version": "3.5.1",
-  "description": "Vue.js wrapper for chart.js for creating beautiful charts.",
+  "description": "Vue.js wrapper for @swivel-admin/chart.js for creating beautiful charts.",
   "author": "Jakub Juszczak <jakub@posteo.de>",
   "homepage": "http://vue-chartjs.org",
   "license": "MIT",
@@ -61,7 +61,7 @@
     "docs:build": "vuepress build docs"
   },
   "peerDependencies": {
-    "chart.js": ">= 2.5"
+    "@swivel-admin/chart.js": ">= 2.5"
   },
   "dependencies": {
     "@types/chart.js": "^2.7.55"
@@ -74,7 +74,7 @@
     "@types/chart.js": "^2.7.55",
     "babel-loader": "8.0.0-beta.0",
     "chai": "^3.5.0",
-    "chart.js": "^2.8.0",
+    "@swivel-admin/chart.js": "^2.8.0",
     "chromedriver": "^2.28.0",
     "connect-history-api-fallback": "^1.1.0",
     "cross-env": "^5.1.1",

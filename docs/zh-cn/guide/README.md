@@ -1,20 +1,20 @@
 # 起步
 
-**vue-chartjs** 是 Vue 对于 [Chart.js](https://github.com/chartjs/Chart.js) 的封装. 你可以很简单的创建可复用的图表组件.
+**vue-chartjs** 是 Vue 对于 [@swivel-admin/chart.js](https://github.com/chartjs/@swivel-admin/chart.js) 的封装. 你可以很简单的创建可复用的图表组件.
 
 ## 介绍
 
-`vue-chartjs` 让你在 Vue 中能更好的使用 Chart.js . 非常适合想要尽快启动和运行简单图表的人
+`vue-chartjs` 让你在 Vue 中能更好的使用 @swivel-admin/chart.js . 非常适合想要尽快启动和运行简单图表的人
 
-它抽象了一些简单的逻辑,  但是也暴露了 Chart.js 对象, 提供了极大的灵活性.
+它抽象了一些简单的逻辑,  但是也暴露了 @swivel-admin/chart.js 对象, 提供了极大的灵活性.
 
 ## 安装
 
 ### NPM
 
-你可以在 `npm` 下安装 `vue-chartjs`. 当然, 你也需要在项目中安装 `chart.js` 依赖. 因为 `Chart.js` 是一个 [peerDependency](https://docs.npmjs.com/files/package.json#peerdependencies). 这种方式你可以完全控制 Chart.js 的版本
+你可以在 `npm` 下安装 `vue-chartjs`. 当然, 你也需要在项目中安装 `@swivel-admin/chart.js` 依赖. 因为 `@swivel-admin/chart.js` 是一个 [peerDependency](https://docs.npmjs.com/files/package.json#peerdependencies). 这种方式你可以完全控制 @swivel-admin/chart.js 的版本
 
-`yarn add vue-chartjs chart.js` or `npm install vue-chartjs chart.js --save`
+`yarn add vue-chartjs @swivel-admin/chart.js` or `npm install vue-chartjs @swivel-admin/chart.js --save`
 
 ::: tip
 如果你使用的是 vue 1.x 版本, 请使用 `legacy` 标签. 然而, Vue 1 所支持的版本不再维护了.
@@ -25,15 +25,15 @@
 ### 浏览器
 
 你也可以直接在浏览器中使用 `vue-chartjs`.
-先添加 `Chart.js` 脚本, 再添加 `vue-chartjs` 脚本.
+先添加 `@swivel-admin/chart.js` 脚本, 再添加 `vue-chartjs` 脚本.
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/@swivel-admin/chart.js/2.7.1/Chart.min.js"></script>
 <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
 ```
 ## 整合
 
-`Chart.js` 将所有可用的图表类型, 都导出为命名组件, 并可以直接导入它们. 这些组件都是普通的 Vue 组件, 然而, 你需要`扩展`它.
+`@swivel-admin/chart.js` 将所有可用的图表类型, 都导出为命名组件, 并可以直接导入它们. 这些组件都是普通的 Vue 组件, 然而, 你需要`扩展`它.
 
 `vue-chartjs` 的想法是提供容易使用的组件, 并且具有最大限度的灵活性和扩展性. 要实现这一点, 你需要创建你自己的 *Chart Component* 并通过 `vue-chartjs` 提供的组件来扩展它.
 
@@ -62,7 +62,7 @@ export default {
 
 `this.renderChart()` 方法由 `Bar` 组件提供, 接收两个对象参数.第一个是你的图表数据, 第二个是配置对象.
 
-在这个文档中查看你需要提供的对象结构 [Chart.js docs](http://www.chartjs.org/docs/latest/#creating-a-chart) .
+在这个文档中查看你需要提供的对象结构 [@swivel-admin/chart.js docs](http://www.chartjs.org/docs/latest/#creating-a-chart) .
 
 ### Vue 单文件组件
 
@@ -93,7 +93,7 @@ export default {
 
 ## 更新 Charts
 
-如果你修改了数据集, Chart.js 是不会提供实时更新的. 当然,  `vue-chartjs` 提供了两个 mixins 来实现.
+如果你修改了数据集, @swivel-admin/chart.js 是不会提供实时更新的. 当然,  `vue-chartjs` 提供了两个 mixins 来实现.
 
 - `reactiveProp`
 - `reactiveData`
@@ -104,7 +104,7 @@ export default {
 
 ### 例子
 
-**LineChart.js**
+**Line@swivel-admin/chart.js**
 ```javascript
 import { Line, mixins } from 'vue-chartjs'
 const { reactiveProp } = mixins
@@ -132,7 +132,7 @@ export default {
 </template>
 
 <script>
-  import LineChart from './LineChart.js'
+  import LineChart from './Line@swivel-admin/chart.js'
 
   export default {
     components: {
@@ -207,7 +207,7 @@ export default {
 
 `options` 对象不是响应式的. 所以如果你动态改变图表的配置, 他们将无法被 mixin 识别.
 
-如果你正在使用 mixin , 你需要使用`options`来传递你的配置. 这是非常重要的, 因为 mixin 将调用 chart.js 的 `update()` 方法 或者 销毁并渲染一个新的图表. 如果 mixin 渲染一个新的图表, 它将调用`this.renderChart(this.chartData, this.options)`.
+如果你正在使用 mixin , 你需要使用`options`来传递你的配置. 这是非常重要的, 因为 mixin 将调用 @swivel-admin/chart.js 的 `update()` 方法 或者 销毁并渲染一个新的图表. 如果 mixin 渲染一个新的图表, 它将调用`this.renderChart(this.chartData, this.options)`.
 
 但是如果你在`mounted()`传递你的配置, 它们将直接被遗弃.
 
@@ -324,7 +324,7 @@ export default {
 
 ### Chart使用API的数据
 
-使用API获取数据是一种常见模式. 然而, 这里有一些问题需要记住. 最常见的问题是, 你直接安装你的图表, 将异步API回调的数据传递进去. 这种方法导致的问题是, chart.js 试图去渲染你的图表, 访问图表数据, 但是你的API回调是异步的. 所以你图表在你数据到达前安装.
+使用API获取数据是一种常见模式. 然而, 这里有一些问题需要记住. 最常见的问题是, 你直接安装你的图表, 将异步API回调的数据传递进去. 这种方法导致的问题是, @swivel-admin/chart.js 试图去渲染你的图表, 访问图表数据, 但是你的API回调是异步的. 所以你图表在你数据到达前安装.
 
 防止这个问题, 一个 `v-if` 即可.
 
@@ -392,7 +392,7 @@ export default {
 
 ### Chart的动态样式
 
-你可以设置 `responsive: true` 然后传递到 styles 对象, 这被当做内联样式应用于外层div. 这种方式你可以动态改变外层容器的高度和宽度, 这并不是chart.js 的默认行为. 使用计算属性可以很好的完成.
+你可以设置 `responsive: true` 然后传递到 styles 对象, 这被当做内联样式应用于外层div. 这种方式你可以动态改变外层容器的高度和宽度, 这并不是@swivel-admin/chart.js 的默认行为. 使用计算属性可以很好的完成.
 
 ::: warning
  你需要设置 `position: relative`
@@ -432,13 +432,13 @@ export default {
 
 ### 自定义/新的图表
 
-有时候你需要扩展Chart.js默认的图表. 这里有许多[例子](http://www.chartjs.org/docs/latest/developers/charts.html), 来教你如何扩展和修改默认的图表, 或者创建自己的图表类型.
+有时候你需要扩展@swivel-admin/chart.js默认的图表. 这里有许多[例子](http://www.chartjs.org/docs/latest/developers/charts.html), 来教你如何扩展和修改默认的图表, 或者创建自己的图表类型.
 
 在 `vue-chartjs`, 你可以使用同样的方式来做到这一点
 
 ```js
-// 1. 引入Chart.js, 你可以使用全局的图表对象
-import Chart from 'chart.js'
+// 1. 引入@swivel-admin/chart.js, 你可以使用全局的图表对象
+import Chart from '@swivel-admin/chart.js'
 // 2. 引入 `generateChart()`方法创建vue组件.
 import { generateChart } from 'vue-chartjs'
 
@@ -466,7 +466,7 @@ export default {
 你可以在这里找到一些资源，比如关于如何使用`vue-chartjs`的教程
 
 - [Using vue-chartjs with WordPress](https://medium.com/@apertureless/wordpress-vue-and-chart-js-6b61493e289f)
-- [Create stunning Charts with Vue and Chart.js](https://hackernoon.com/creating-stunning-charts-with-vue-js-and-chart-js-28af584adc0a)
-- [Let’s Build a Web App with Vue, Chart.js and an API Part I](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-544eb81c4b44)
-- [Let’s Build a Web App with Vue, Chart.js and an API Part II](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-part-ii-39781b1d5acf)
+- [Create stunning Charts with Vue and @swivel-admin/chart.js](https://hackernoon.com/creating-stunning-charts-with-vue-js-and-chart-js-28af584adc0a)
+- [Let’s Build a Web App with Vue, @swivel-admin/chart.js and an API Part I](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-544eb81c4b44)
+- [Let’s Build a Web App with Vue, @swivel-admin/chart.js and an API Part II](https://hackernoon.com/lets-build-a-web-app-with-vue-chart-js-and-an-api-part-ii-39781b1d5acf)
 - [Build a realtime chart with VueJS and Pusher](https://blog.pusher.com/build-realtime-chart-with-vuejs-pusher/)

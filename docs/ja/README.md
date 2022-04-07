@@ -9,6 +9,6 @@ features:
 - title: 拡張性
   details: シンプルに使えて、拡張も簡単 💪
 - title: 強力
-  details: chart.jsのフルパワーを持っている 💯
+  details: @swivel-admin/chart.jsのフルパワーを持っている 💯
 footer: MIT Licensed | Copyright © 2018-present Jakub Juszczak
 ---

@@ -9,6 +9,6 @@ features:
 - title: 扩展性
   details: 使用简单, 扩展方便 💪
 - title: 强大
-  details: 拥有 chart.js 的全部功能 💯
+  details: 拥有 @swivel-admin/chart.js 的全部功能 💯
 footer: MIT Licensed | Copyright © 2018-present Jakub Juszczak
 ---

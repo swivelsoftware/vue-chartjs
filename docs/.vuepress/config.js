@@ -127,37 +127,37 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: '📈 vue-chartjs',
-      description: '⚡ Easy and beautiful charts with Chart.js and Vue.js'
+      description: '⚡ Easy and beautiful charts with @swivel-admin/chart.js and Vue.js'
     },
     '/zh-cn/': {
       lang: 'zh-CN',
       title: '📈 vue-chartjs',
-      description: '⚡ 使用 Chart.js 和 Vue.js 搭建简单和漂亮的图表'
+      description: '⚡ 使用 @swivel-admin/chart.js 和 Vue.js 搭建简单和漂亮的图表'
     },
     '/id/': {
       lang: 'id',
       title: '📈 vue-chartjs',
-      description: '⚡ Easy and beautiful charts with Chart.js and Vue.js'
+      description: '⚡ Easy and beautiful charts with @swivel-admin/chart.js and Vue.js'
     },
     '/ja/': {
       lang: 'ja',
       title: '📈 vue-chartjs',
-      description: '⚡ Easy and beautiful charts with Chart.js and Vue.js'
+      description: '⚡ Easy and beautiful charts with @swivel-admin/chart.js and Vue.js'
     },
     '/ru/': {
       lang: 'ru',
       title: '📈 vue-chartjs',
-      description: '⚡ Простые и красивые графики с Chart.js и Vue.js'
+      description: '⚡ Простые и красивые графики с @swivel-admin/chart.js и Vue.js'
     },
     '/pt-br/': {
       lang: 'pt-br',
       title: '📈 vue-chartjs',
-      description: '⚡ Gráficos bonitos e fácil com Chart.js e Vue.js'
+      description: '⚡ Gráficos bonitos e fácil com @swivel-admin/chart.js e Vue.js'
     },
     '/fr-fr/': {
       lang: 'fr-fr',
       title: '📈 vue-chartjs',
-      description: '⚡ Easy and beautiful charts with Chart.js and Vue.js'
+      description: '⚡ Easy and beautiful charts with @swivel-admin/chart.js and Vue.js'
     }
   }
 }
